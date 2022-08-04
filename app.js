@@ -7,18 +7,21 @@ const game = {
   play: function () {
     this.secretNum = Math.floor(Math.random() *
       (this.biggestNum - this.smallestNum + 1)) + this.smallestNum
-    getGuess()
+    console.log(this.secretNum)
+    this.getGuess()
   },
   getGuess: function () {
     let guess;
 
-
-    guess = parseInt(prompt(`Enter a Number between ${this.smallestNum} and ${this.biggestNum}.`))
-
-    // console.log(guess)
+    
+    while (guess !== this.secretNum){
+      guess = parseInt(prompt(`Enter a Number between ${this.smallestNum} and ${this.biggestNum}.`))
+    }
+    
+    console.log(guess)
 
 
   }
 }
 
-// game.getGuess()
+game.play()
