@@ -19,6 +19,13 @@ const game = {
     while (guess !== this.secretNum){
       guess = parseInt(prompt(`Enter a Number between ${this.smallestNum} and ${this.biggestNum}.`))
       this.prevGuesses.push(guess)
+      if (guess > this.secretNum){
+        prompt(`${guess} was too high, here are your previous guesses: ${this.prevGuesses}. Press Enter to continue.`)
+      } else if (guess < this.secretNum) {
+        prompt(`${guess} was too low, here are your previous guesses: ${this.prevGuesses}. Press Enter to continue.`)
+      } else {
+        prompt(`You guessed ${this.secretNum}! That was the secret number! Press Enter to continue.`)
+      }
     }
     
     console.log(guess)
