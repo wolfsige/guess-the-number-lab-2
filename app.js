@@ -15,11 +15,11 @@ const game = {
       guess = parseInt(prompt(`Enter a Number between ${this.smallestNum} and ${this.biggestNum}.`))
       this.prevGuesses.push(guess)
       if (guess > this.secretNum) {
-        alert(`${guess} was too high, here are your previous guesses: ${this.prevGuesses}.`, `Press Enter to continue.`)
+        alert(`${guess} was too high, here are your previous guesses: ${this.prevGuesses}.`)
       } else if (guess < this.secretNum) {
-        alert(`${guess} was too low, here are your previous guesses: ${this.prevGuesses}.`,`Press Enter to continue.`)
+        alert(`${guess} was too low, here are your previous guesses: ${this.prevGuesses}.`)
       } else {
-          this.prevGuesses.length === 1 ? alert(`You guessed ${this.secretNum}! That was the secret number! it took 1 guess!`) : alert(`You guessed ${this.secretNum}! That was the secret number! it took ${this.prevGuesses.length} guesses!`, `Press Enter to end game.`)
+          this.prevGuesses.length === 1 ? alert(`You guessed ${this.secretNum}! That was the secret number! it took 1 guess!`) : alert(`You guessed ${this.secretNum}! That was the secret number! it took ${this.prevGuesses.length} guesses!`)
       }
     }
   }
